@@ -76,8 +76,7 @@
 
 <body class="template-{{ template | split: '.' | first }}">
 
-  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
+<!-- 
   <div id="SearchDrawer" class="search-bar drawer drawer--top" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}">
     <div class="search-bar__table">
       <div class="search-bar__table-cell search-bar__form-wrapper">
@@ -96,9 +95,9 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  {% section 'header' %}
+{% comment %}  {% section 'header' %} {% endcomment %}
 
   <div class="page-container" id="PageContainer">
 
@@ -106,16 +105,11 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+{%comment %} {% section 'footer' %} {% endcomment %}
 
-    <div id="slideshow-info" class="visually-hidden" aria-hidden="true">
-      {{- 'sections.slideshow.navigation_instructions' | t -}}
-    </div>
-
+  
   </div>
 
-  <ul hidden>
-    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-  </ul>
+
 </body>
 </html>
