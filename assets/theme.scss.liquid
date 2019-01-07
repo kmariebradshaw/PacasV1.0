@@ -41,6 +41,7 @@ body {
   margin: 0;
   color: black;
 }
+.background-purple { background-color: $purple; }
 .tar { text-align: right; }
 .fw { width: 100%; }
 .flex-container-no, .flex-container{
@@ -95,6 +96,8 @@ body {
 .accent { font-family: 'Handsdown', sans-serif; }
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicksand', sans-serif; } 
+/*header*/
+.banner { padding: 10px; }
 /*index page*/
 #atf { 
   background-image: url("{{'atf.png' | asset_url}}");
@@ -102,16 +105,13 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
   background-repeat: no-repeat;
   h1, h2 { transform: rotate(-15deg); }
 }
-
   .cta { width: 20%; }
   .cta h3:before { 
     content: "~";
     position: absolute;
     margin-top: 20px;
   }
-
 .great-than { vertical-align: middle; width: 75px; }
-
 #comparison { 
   background-image: url("{{'benefits.png' | asset_url}}");
   background-size: contain;
@@ -162,6 +162,5 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
   background-repeat: no-repeat;
   height: 400px;
 }
-
 #header-spreader { max-width: 1250px; margin: 0 auto; }
 #farms { position: absolute; margin-top: 160px; }
