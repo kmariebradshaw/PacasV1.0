@@ -41,6 +41,8 @@ body {
   margin: 0;
   color: black;
 }
+html { padding-bottom: 0 !important; }
+.background-gray { background-color: whitesmoke; }
 .background-purple { background-color: $purple; }
 .tar { text-align: right; }
 .fw { width: 100%; }
@@ -53,6 +55,7 @@ body {
   max-width: 1000px;
   margin: 20px auto;
 } 
+.subscript {font-size: 8pt;}
 .half { width: 50%; }
 .two-thirds { width: 66%; }
 .fe { align-self: flex-end; }
@@ -98,10 +101,35 @@ body {
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicksand', sans-serif; } 
 /*header*/
-.banner { padding: 10px; }
+.banner { padding: 10px; box-sizing: border-box; }
 nav h4 { margin-left: 10px; margin-right: 10px; }
 .jlogo { width: 110px; }
 nav .jes { width: calc(50% - 55px); }
+/* footer */
+footer ul { list-style: none; padding-left: 0; }
+.email {
+    width: 80%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid black;
+}
+.submit {
+    width: 20%;
+    box-sizing: border-box;
+    margin: 20px 0 20px -5px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+footer .jlogo { margin: 0 80px; }
+footer form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+footer section { width: calc(50% - 55px);  margin: auto 20px;}
+.social-icons img { max-width: 20px; margin: 5px; }
 /*index page*/
 #atf { 
   background-image: url("{{'atf.png' | asset_url}}");
