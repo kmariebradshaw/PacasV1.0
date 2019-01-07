@@ -64,10 +64,10 @@ body {
   p, table { font-size: 14pt; } 
   #comparison {
     height: 350px;
-    width: 900px;
-    margin: 0 auto;
+    width: 850px;
+    margin: 0 auto; 
   }
-}
+} 
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
   h1 { font-size: 57pt; } 
   h2 { font-size: 32pt; } 
@@ -114,8 +114,9 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
 
 #comparison { 
   background-image: url("{{'benefits.png' | asset_url}}");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   h3 { position: absolute; }
 }
 #warmer { margin-top: 50px; margin-left: -10px;}
@@ -123,15 +124,15 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
 #soft {  margin-top: 160px; margin-left: -60px; }
 #quality { margin-top: 220px; margin-left: -30px; }
 #thermo{
-    margin-left: 800px;
+    margin-left: 750px;
     margin-top: 230px;
 }
 #warm {
-    margin-left: 790px;
+    margin-left: 740px;
     margin-top: 80px;
 }
 #quantity{
-    margin-left: 810px;
+    margin-left: 760px;
     margin-top: 145px;
 }
 #thermoregulating {
@@ -162,4 +163,5 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
   height: 400px;
 }
 
+#header-spreader { max-width: 1250px; margin: 0 auto; }
 #farms { position: absolute; margin-top: 160px; }
