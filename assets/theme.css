@@ -1,5 +1,5 @@
 /*/*general*/
-$purple: #dacbd8;
+/* $purple: #dacbd8; */
 @font-face {
   font-family: 'Quicksand';
   src: url('Quicksand-Bold.ttf'); 
@@ -43,7 +43,7 @@ body {
 }
 html { padding-bottom: 0 !important; }
 .background-gray { background-color: whitesmoke; }
-.background-purple { background-color: $purple; }
+.background-purple { background-color: #dacbd8; }
 .tar { text-align: right; }
 .fw { width: 100%; }
 .flex-container-no, .flex-container{
@@ -132,25 +132,26 @@ footer section { width: calc(50% - 55px);  margin: auto 20px;}
 .social-icons img { max-width: 20px; margin: 5px; }
 /*index page*/
 #atf { 
-  background-image: url("{{'atf.png' | asset_url}}");
+  background-image: url("//cdn.shopify.com/s/files/1/0117/0597/4884/t/5/assets/atf.png?13253628691377876385");
   background-size: cover;
   background-repeat: no-repeat;
-  h1, h2 { transform: rotate(-15deg); }
-}
+ }
   .cta { width: 20%; }
   .cta h3:before { 
     content: "~";
     position: absolute;
     margin-top: 20px;
   }
+#atf  h1, #atf h2 { transform: rotate(-15deg); }
 .great-than { vertical-align: middle; width: 75px; }
 #comparison { 
-  background-image: url("{{'benefits.png' | asset_url}}");
+  background-image: url("//cdn.shopify.com/s/files/1/0117/0597/4884/t/5/assets/benefits.png?13253628691377876385");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  h3 { position: absolute; }
 }
+#comparison  h3 { position: absolute; }
+
 #warmer { margin-top: 50px; margin-left: -10px;}
 #hypo { margin-top: 100px; margin-left: -100px; }
 #soft {  margin-top: 160px; margin-left: -60px; }
@@ -172,24 +173,25 @@ footer section { width: calc(50% - 55px);  margin: auto 20px;}
     margin-left: -110px;
 }
 #give-the-gift {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("{{'gift.jpg' | asset_url}}");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("//cdn.shopify.com/s/files/1/0117/0597/4884/t/5/assets/gift.jpg?13253628691377876385");
   background-size: cover;
   background-repeat: no-repeat;
-  div { margin: 0 auto; }
 }
+#give-the-gift   div { margin: 0 auto; }
+
 .inner { padding: 100px; }
 
 .button { padding: 10px; width: 150px; cursor: pointer;}
 .accent-section { padding: 50px; }
 #sock-prev { width: 200px; }
 #fresh {
-    background-image: url("{{'fleece.jpg' | asset_url}}");
+    background-image: url("//cdn.shopify.com/s/files/1/0117/0597/4884/t/5/assets/fleece.jpg?13253628691377876385");
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
 }
 #index-shop-cta {
-    background-image: url("{{'shop.jpg' | asset_url}}");
+    background-image: url("//cdn.shopify.com/s/files/1/0117/0597/4884/t/5/assets/shop.jpg?13253628691377876385");
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
