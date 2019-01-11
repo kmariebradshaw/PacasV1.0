@@ -31,6 +31,8 @@
   {%- endif -%}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
 
+    <script src="{{ 'jquery.min.js' | asset_url }}" ></script>
+    <script src="{{ 'custom.jquery.js' | asset_url }}" ></script>
 
 
   <script>
@@ -59,9 +61,7 @@
 
   {% section 'header' %}
 
-  <main role="main" id="MainContent">
     {{ content_for_layout }}
-  </main>
 
   {% section 'footer' %}
 
