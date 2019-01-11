@@ -16,7 +16,6 @@
       <img src="{{'fluff.png' | asset_url}}" id="fluff1" class="vis-hid" />
       <img src="{{'fluff.png' | asset_url}}" id="fluff3" class="vis-hid" />
       <img src="{{'fluff.png' | asset_url}}" id="fluff4" class="vis-hid" />
-
     </div>
     <img src="{{'crown.png' | asset_url}}" class="icon slide1"/>
     <img src="{{'bow.png' | asset_url}}" class="icon slide2" style="display: none; margin-top: 50px"/>
@@ -31,7 +30,24 @@
     </div>
     <p class="slide1">Tap to shave your alpaca</p>
   </section>
-  <section style="display:none;">
+  <section style="display:none;" id="color-style">
+    <p class="subscript tac">Pick a color to dye your fleece</p>
+    <div class="color-circle-container">
+      <img src="{{'fluff.png' | asset_url}}" class="center" id="color-fluff" />
+      <img src="{{'aquamarine.png' | asset_url}}" class="color-icon deg0"/>
+      <img src="{{'mysoul.png' | asset_url}}" class="color-icon deg45"/>
+      <img src="{{'bubblegum.png' | asset_url}}" class="color-icon deg90"/>
+      <img src="{{'condensedmilk.png' | asset_url}}" class="color-icon deg135"/>
+      <img src="{{'CORAL.png' | asset_url}}" class="color-icon deg180"/>
+      <img src="{{'lincolnlog.png' | asset_url}}" class="color-icon deg225"/>
+      <img src="{{'chicagoweather.png' | asset_url}}" class="color-icon deg270"/>
+      <img src="{{'maryj.png' | asset_url}}" class="color-icon deg315"/>
+    </div>
+
+    <img src="{{'leaf.png' | asset_url}}" class="icon" id="leaf"/>
+    <p class="tac nmt">Alpaca fibers have no natural<br> grease and are known as the </br>world's most sustainable fibers.</p>
+    <div class="flow-button border-black continue clickable"><p class="tac nm">Let's Go</p></div>
+
   </section>
   <section style="display:none;">
   </section>
@@ -40,12 +56,13 @@
   $('.continue').click(function() {
     $(this).closest('section').hide().next('section').fadeIn();
   })
-  var shaveCount = 0 
+  var shaveCount = 0  
   $('#shaver').click(function() {
     shaveCount += 1 
     if (shaveCount == 4) {
       $('#clothed-paca').attr("src", "{{'naked-paca.png' | asset_url }}"); 
     $('.slide1').hide()
+    $('#shave-me').addClass('slide2'); 
     $('.slide2').fadeIn();
     }
     $('#fluff' + shaveCount).removeClass('vis-hid'); 
