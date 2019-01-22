@@ -1,0 +1,141 @@
+<style>
+  #shopify-section-header { display: none !important;}
+  footer { display: none !important;}
+  main { padding-top: 0 !important; }
+  #shaver { position: absolute; }
+</style>
+<div id="flow">
+  <section id="paca-intro">
+    <h1 class="close-flow tar"><a href="/">✕</a></h1>
+    <h1 class="accent nm tac text-white">Hi, I'm Paca!</h1>
+    <h2 class="nmt tac nm text-white">Did you know my fleece <br>is so soft the Incas<br> valued it more than gold?</h2>
+    <p class="tac text-white">So I figured why not make <br>a great everyday sock with<Br> this noble fiber</p>
+    <div class="flow-button border-white continue clickable"><p class="text-white tac nm">Cool, Let's Knit</p></div>
+  </section>
+  <section style="display:none;" id="shave-me">
+   <h1 class="close-flow tar"><a href="/">✕</a></h1>
+    <div class="flex-container-no dc">
+      <img src="{{'clothed-paca.png' | asset_url}}" id="clothed-paca" class="paca-bod" />
+      <div class="flex-container-no">
+        <img src="{{'fluff.png' | asset_url}}" id="fluff2" class="vis-hid" />
+        <img src="{{'fluff.png' | asset_url}}" id="fluff1" class="vis-hid" />
+        <img src="{{'fluff.png' | asset_url}}" id="fluff3" class="vis-hid" />
+        <img src="{{'fluff.png' | asset_url}}" id="fluff4" class="vis-hid" />
+      </div>
+      <div class="flow-button border-black continue clickable slide2" style="display: none;"><p class="tac nm">Tap to add color</p></div>
+
+      <div class="flex-container-no">
+        <img src="{{'rightarrow.png' | asset_url}}" class="icon slide1"/>
+        <img src="{{'shaver.png' | asset_url}}" id="shaver" class="clickable" />
+        <img src="{{'arrowpointingleft.png' | asset_url}}" class="icon slide1"/>
+      </div>
+      <p class="slide1">Tap to give me a trim</p>
+      <div id="prog" class="flex-container-no jcc" >
+        <div class="progress-circle filled"></div>
+        <div class="progress-circle"></div>
+        <div class="progress-circle"></div>
+      </div>
+    </div>
+  </section>
+  <section style="display:none;" id="color-style">
+    <h1 class="close-flow tar text-white"><a href="/">✕</a></h1>
+    <p class="subscript tac">Pick a color to dye your fleece</p>
+    <div class="color-circle-container">
+      <img src="{{'fluff.png' | asset_url}}" class="center" id="color-fluff" />
+      <img src="{{'aquamarine.png' | asset_url}}" class="color-icon deg0"/>
+      <img src="{{'mysoul.png' | asset_url}}" class="color-icon deg45"/>
+      <img src="{{'bubblegum.png' | asset_url}}" class="color-icon deg90"/>
+      <img src="{{'condensedmilk.png' | asset_url}}" class="color-icon deg135"/>
+      <img src="{{'CORAL.png' | asset_url}}" class="color-icon deg180"/>
+      <img src="{{'lincolnlog.png' | asset_url}}" class="color-icon deg225"/>
+      <img src="{{'chicagoweather.png' | asset_url}}" class="color-icon deg270"/>
+      <img src="{{'maryj.png' | asset_url}}" class="color-icon deg315"/>
+    </div>
+
+    <img src="{{'leaf.png' | asset_url}}" class="icon" id="leaf"/>
+    <p class="tac nmt">Alpaca fibers have no natural<br> grease and are known as the </br>world's most sustainable fibers.</p>
+    <div class="flow-button border-black continue clickable"><p class="tac nm">Let's Go</p></div>
+  <div id="prog" class="flex-container-no jcc">
+      <div class="progress-circle filled"></div>
+      <div class="progress-circle filled"></div>
+      <div class="progress-circle"></div>
+    </div>
+  </section>
+  <section style="display:none;">
+      <a href="/"><h1 class="close-flow tar text-white">✕</h1></a>
+
+      <div id="prog" class="flex-container-no jcc">
+      <div class="progress-circle filled"></div>
+      <div class="progress-circle filled"></div>
+      <div class="progress-circle filled"></div>
+    </div>
+  </section>
+</div>
+<script>
+  $('.continue').click(function() {
+    $(this).closest('section').hide().next('section').fadeIn();
+  })
+
+$( "#shaver" ).click(function() {
+  $('.slide1').addClass('vis-hid')
+  $( "#shaver" ).animate({
+    top: "-=250",
+    left: "-=50px",
+  }, 1000, function() {
+    $( "#shaver" ).animate({
+      top: "+=70",
+    }, 1000, function() {
+                        $('#clothed-paca').attr("src", "{{'naked-paca1.png' | asset_url }}");
+
+      $('#fluff1').removeClass('vis-hid');
+      $( "#shaver" ).animate({
+        left: "+=50px",
+        top: "-=80",
+      }, 500, function() {
+        $( "#shaver" ).animate({
+          top: "+=90",
+        }, 1100, function() {
+                            $('#clothed-paca').attr("src", "{{'naked-paca2.png' | asset_url }}");
+
+          $('#fluff2').removeClass('vis-hid');
+          $('#shaver').animate({
+            left: "+=50px",
+            top: "-=70px",
+
+          }, 600, function() {
+            $(this).css('-webkit-transform','rotate(-45deg)'); 
+            $('#shaver').animate({
+              top: "+=50px",
+              left: "+=30px",
+            }, 1000, function() {
+              $('#fluff3').removeClass('vis-hid')
+              $(this).css('-webkit-transform','rotate(0deg)'); 
+              $('#shaver').animate({
+                top: "-=90px",
+                left: "-=30px",
+              }, 500, function() {
+                $('#shaver').animate({
+                  top: "+=90px"
+                }, 1300, function() {
+                  $('#clothed-paca').attr("src", "{{'naked-paca.png' | asset_url }}");
+                  $('#fluff4').removeClass('vis-hid')
+                  $('#shaver').hide();
+                })
+              })
+            })
+          })
+       });
+    
+    });
+    });
+  });
+});
+    // shaveCount += 1 
+    // if (shaveCount == 4) {
+    //   $('#clothed-paca').attr("src", "{{'naked-paca.png' | asset_url }}"); 
+    // $('.slide1').hide()
+    // $('#shave-me').addClass('slide2'); 
+    // $('.slide2').fadeIn();
+    // }
+    // $('#fluff' + shaveCount).removeClass('vis-hid'); 
+</script>

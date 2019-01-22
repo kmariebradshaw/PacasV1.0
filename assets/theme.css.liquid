@@ -41,6 +41,9 @@ body {
   margin: 0;
   color: black;
 }
+.upper-pad {
+  padding-top: 42.53px;
+}
 html { padding-bottom: 0 !important; }
 .background-gray { background-color: whitesmoke; }
 .background-purple { background-color: #dacbd8; }
@@ -62,6 +65,7 @@ html { padding-bottom: 0 !important; }
 .jes { justify-content: space-evenly; }
 .jcc { justify-content: center; }
 .border-white { border: 1px solid #fff; }
+.border-black { border: 1px solid black; }
 @media only screen and (min-width: 1100px) {
   h1 { font-size: 67pt; } 
   h2 { font-size: 34pt; } 
@@ -89,7 +93,8 @@ html { padding-bottom: 0 !important; }
   .accent-padding { padding: 20px; }
 }
 @media only screen and (max-width: 588px) {
-  h1 { font-size: 22pt; } 
+  h1 { font-size: 22pt; }
+  #flow h1 { font-size: 36pt; } 
   h2 { font-size: 16pt; } 
   .flex-container { display: block; }
   .flex-container .half { width: 100%; }
@@ -101,10 +106,20 @@ html { padding-bottom: 0 !important; }
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicksand', sans-serif; } 
 /*header*/
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+      z-index: 999;
+    margin-top: -1px;
+}
 .banner { padding: 10px; box-sizing: border-box; }
 nav h4 { margin-left: 10px; margin-right: 10px; }
 .jlogo { width: 110px; }
 nav .jes { width: calc(50% - 55px); }
+nav { padding: 20px;  box-shadow: 0 0 3px 0 rgba(0,0,0,.3); box-sizing: border-box;   transition: 0.5s ease-out;
+}
 /* footer */
 footer ul { list-style: none; padding-left: 0; }
 .email {
@@ -198,3 +213,95 @@ footer section { width: calc(50% - 55px);  margin: auto 20px;}
 }
 #header-spreader { max-width: 1250px; margin: 0 auto; }
 #farms { position: absolute; margin-top: 160px; }
+/* flow */
+#flow section { min-height: 100vh; padding: 50px 0px; box-sizing: border-box; }
+.dc { flex-direction: column; }
+#paca-intro { 
+  background-color: #F5C4A5; 
+  background-image: url("{{'alpaca_coral_crown.png' | asset_url}}"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.flow-button {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 30px;
+    padding: 5px;
+    max-width: 280px;
+}
+.icon { max-width: 50px; }
+.paca-bod {width: 300px;}
+#shaver { width: 100px; transition: transform 0.5s; }
+#shave-me  { background-image: linear-gradient(to bottom left, #FFFEFD, #FCE4C1);}
+#shave-me.slide2 { background-image: linear-gradient(to bottom left, #FFFEFD, #FDE0CB); }
+#color-style { background-image: linear-gradient(to bottom left, #FFFEFD, whitesmoke); }
+#fluff1 {
+    width: 90px; 
+    margin-top: -33px;
+    margin-left: -150px;
+}
+#fluff2 { width: 120px; }
+#fluff3 {
+    width: 110px;
+    margin-top: -25px;
+}
+#fluff4 { width: 100px; margin-left: -45px; }
+.vis-hid { visibility: hidden; }
+
+.color-circle-container {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+    max-width: 300px;
+    max-height: 300px;
+    box-sizing: border-box;
+    margin: 1.75em auto 0;
+}
+.color-circle-container img {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 4em; height: 4em;
+    margin: -2em;
+}
+body .center {
+    width: 130px;
+    height: 130px;
+    margin-left: -65px;
+    margin-top: -65px;
+}
+#leaf { margin: 0 auto; display: block; }
+.deg0 { transform: translate(12em) translate(-90px) } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(45deg) translate(100px) rotate(-45deg); }
+.deg135 { transform: rotate(135deg) translate(100px) rotate(-135deg); }
+.deg90 { transform: rotate(90deg) translate(100px); }
+.deg180 { transform: translate(-12em) translate(90px); }
+.deg225 { transform: rotate(225deg) translate(100px) rotate(-225deg); }
+.deg270 { transform: rotate(270deg) translate(100px); }
+.deg315 { transform: rotate(315deg) translate(100px) rotate(-315deg); }
+.progress-circle { width: 15px; height: 15px; border: 1px solid white; border-radius: 50%; margin: 5px;}
+.progress-circle.filled { background: white; }
+#prog { position: absolute; bottom: 20px; width: 100%; }
+#flow .close-flow {
+    margin-top: -40px;
+    margin-right: 20px;
+    opacity: 0.2;
+    font-size: 24pt;
+    color: brown;
+}
+
+.paca-bod { width: 175px; margin: 0 auto; transition: src 2s;}
+a {text-decoration: none;}
+
+
+
+
+
+
+
+
+
+
+
+
