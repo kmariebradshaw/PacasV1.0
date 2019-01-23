@@ -30,7 +30,6 @@
   font-weight: 400; 
   font-style: normal;
 }
-.page-header { padding: 50px; }
 .text-white { color: #fff; }
 .ttu { text-transform: uppercase; }
 .ib { display: inline-block; }
@@ -59,7 +58,7 @@ html { padding-bottom: 0 !important; }
   margin: 20px auto;
 } 
 .subscript {font-size: 8pt;}
-.half { width: 50%; }
+.half { width: 50%; box-sizing: border-box; }
 .two-thirds { width: 66%; }
 .third { width: 33%; }
 .fe { align-self: flex-end; }
@@ -67,6 +66,7 @@ html { padding-bottom: 0 !important; }
 .jcc { justify-content: center; }
 .border-white { border: 1px solid #fff; }
 .border-black { border: 1px solid black; }
+img { max-width: 100%; }
 @media only screen and (min-width: 1100px) {
   h1 { font-size: 67pt; } 
   h2 { font-size: 34pt; } 
@@ -78,6 +78,8 @@ html { padding-bottom: 0 !important; }
     margin: 0 auto; 
   }
   footer { padding: 50px; }
+        #atf  { height: 50vw; }
+
 } 
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
   h1 { font-size: 57pt; } 
@@ -85,25 +87,50 @@ html { padding-bottom: 0 !important; }
   h3{ font-size: 20pt; } 
   p, table { font-size: 12pt; } 
   footer { padding: 50px; }
+        #atf  { height: 75vw; max-height: 600px; }
+
+}
+@media only screen and (min-width: 800px) {
+  .page-header { padding: 50px; }
+  .mo { display: none; }
+
+  .button { width: 200px;}
+
+}
+@media only screen and (max-width: 799px) {
+    .page-header { padding: 50px 20px; }
+    body #fresh h2 { font-size: 26pt; }
+    .do { display: none !important; }
+  .button { width: 120px;}
+
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
   h1 { font-size: 43pt; } 
   h2 { font-size: 30pt; } 
   p, table { font-size: 12pt; }
+    #atf  { height: 75vw; }
+
 }
 @media only screen and (min-width: 589px) {
-  .mo { display: none; }
   .accent-padding { padding: 20px; }
 }
 @media only screen and (max-width: 588px) {
-  h1 { font-size: 22pt; }
   #flow h1 { font-size: 36pt; } 
   h2 { font-size: 16pt; } 
   .flex-container { display: block; }
   .flex-container .half { width: 100%; }
-  .do { display: none; }
   .accent-padding { padding: 10px; }
   .half { width: 100%; }
+  #atf { height: 90vw; }
+
+}
+@media only screen and (max-width: 588px) and (min-width: 400px) {
+    h1 { font-size: 32pt; } 
+
+}
+@media only screen and (max-width: 400px) {
+  h1 { font-size: 22pt; }
+
 }
 .accent { font-family: 'Handsdown', sans-serif; }
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
@@ -155,8 +182,7 @@ footer section {  margin: auto 20px;}
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: #fdf3ed;
-  height: 50vw;
-  max-height: 650px;
+  box-sizing: border-box;
 
  }
   .cta { width: 20%; }
@@ -171,13 +197,19 @@ footer section {  margin: auto 20px;}
     display: block;
     max-width: 500px;
 }
+#mobile-sock { margin-bottom: 50px; }
+#mission { max-width: 600px; margin: 0 auto; }
+#sock-sample {
+    width: 70%;
+    margin-left: -20%;
+}
 .current { border-bottom: 1px solid #7b8284; }
 #atf  h1, #atf h2 { transform: rotate(-15deg); }
 
 #give-the-gift {
     background-image: url("{{'gift.png' | asset_url}}");
     background-size: cover;
-    background-position: left;
+    background-position: 33%;
     background-color: #f5fcfc;
     background-repeat: no-repeat;
     height: 400px;
@@ -185,7 +217,6 @@ footer section {  margin: auto 20px;}
 
 .button {
     padding: 10px;
-    width: 200px;
     cursor: pointer;
     border: 2px solid gray;
     border-radius: 100px;
