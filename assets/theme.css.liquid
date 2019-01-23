@@ -58,7 +58,6 @@ html { padding-bottom: 0 !important; }
   margin: 20px auto;
 } 
 .subscript {font-size: 8pt;}
-.half { width: 50%; box-sizing: border-box; }
 .two-thirds { width: 66%; }
 .third { width: 33%; }
 .fe { align-self: flex-end; }
@@ -77,7 +76,6 @@ img { max-width: 100%; }
     width: 850px;
     margin: 0 auto; 
   }
-  footer { padding: 50px; }
         #atf  { height: 50vw; }
 
 } 
@@ -95,6 +93,8 @@ img { max-width: 100%; }
   .mo { display: none; }
 
   .button { width: 200px;}
+    footer { padding: 50px; }
+
 
 }
 @media only screen and (max-width: 799px) {
@@ -102,6 +102,7 @@ img { max-width: 100%; }
     body #fresh h2 { font-size: 26pt; }
     .do { display: none !important; }
   .button { width: 120px;}
+  footer { padding: 20px; }
 
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
@@ -113,15 +114,19 @@ img { max-width: 100%; }
 }
 @media only screen and (min-width: 589px) {
   .accent-padding { padding: 20px; }
+  .half { width: 50%; box-sizing: border-box; }
+  footer section {  margin: auto 20px;}
+
+
 }
 @media only screen and (max-width: 588px) {
   #flow h1 { font-size: 36pt; } 
   h2 { font-size: 16pt; } 
   .flex-container { display: block; }
-  .flex-container .half { width: 100%; }
   .accent-padding { padding: 10px; }
-  .half { width: 100%; }
   #atf { height: 90vw; }
+  footer section {  margin: 10px;}
+
 
 }
 @media only screen and (max-width: 588px) and (min-width: 400px) {
@@ -159,7 +164,10 @@ footer ul { list-style: none; padding-left: 0; line-height: 1.75; }
     background: transparent;
 }
 footer ::placeholder { color: white; }
-
+footer .subscript  {
+    max-width: 230px;
+    margin: 10px auto;
+}
 .submit {
     width: 25%;
     box-sizing: border-box;
@@ -173,7 +181,6 @@ footer form {
     max-width: 400px;
     margin: 0 auto;
 }
-footer section {  margin: auto 20px;}
 .social-icons img { max-width: 30px; margin: 5px; }
 /*index page*/
 #atf { 
