@@ -39,36 +39,44 @@
   </section>
   <section style="display:none;" id="color-style">
     <h1 class="close-flow tar text-white"><a href="/">✕</a></h1>
-    <p class="subscript tac">Pick a color to dye your fleece</p>
-    <div class="color-circle-container">
-      <img src="{{'fluff.png' | asset_url}}" class="center" id="color-fluff" />
-      <img src="{{'aquamarine.png' | asset_url}}" class="color-icon deg0"/>
-      <img src="{{'mysoul.png' | asset_url}}" class="color-icon deg45"/>
-      <img src="{{'bubblegum.png' | asset_url}}" class="color-icon deg90"/>
-      <img src="{{'condensedmilk.png' | asset_url}}" class="color-icon deg135"/>
-      <img src="{{'CORAL.png' | asset_url}}" class="color-icon deg180"/>
-      <img src="{{'lincolnlog.png' | asset_url}}" class="color-icon deg225"/>
-      <img src="{{'chicagoweather.png' | asset_url}}" class="color-icon deg270"/>
-      <img src="{{'maryj.png' | asset_url}}" class="color-icon deg315"/>
+    <div id="choose">
+      <img src="{{'fluff.png' | asset_url}}" id="color-fluff" />
+      <p class="accent large tac">Pick a color to dye your fleece.</p>
+      <p class="tac">Alpaca fibers have no natural grease and are known as the world's most sustainable fibers.</p>
+      <div class="flex-container-no jes">
+        <img src="{{'purple.png' | asset_url}}" class="color-dye clickable" id="purple"/>
+        <img src="{{'navy.png' | asset_url}}" class="color-dye clickable" id="navy"/>
+      </div>
+       <div class="flex-container-no jes">
+        <img src="{{'aqua.png' | asset_url}}" class="color-dye clickable" id="aqua"/>
+        <img src="{{'coral.png' | asset_url}}"  class="color-dye clickable" id="coral"/>
+      </div>
+       <div class="flex-container-no jes">
+        <img src="{{'gray.png' | asset_url}}"  class="color-dye clickable" id="gray"/>
+        <img src="{{'brown.png' | asset_url}}" class="color-dye clickable" id="condensed-milk"/>
+      </div>
+       <div class="flex-container-no jes">
+        <img src="{{'white.png' | asset_url}}"  class="color-dye clickable" id="white"/>
+        <img src="{{'black.png' | asset_url}}" class="color-dye clickable" id="my-soul"/>
+      </div>
     </div>
-
-    <img src="{{'leaf.png' | asset_url}}" class="icon" id="leaf"/>
-    <p class="tac nmt">Alpaca fibers have no natural<br> grease and are known as the </br>world's most sustainable fibers.</p>
-    <div class="flow-button border-black continue clickable"><p class="tac nm">Let's Go</p></div>
-  <div id="prog" class="flex-container-no jcc">
+    <div id="dye" class="flex-container-no jcc" style="display: none">
+      <div class="third"></div>
+      <div class="two-thirds">
+        <p class="tac large">We've perfected the best combination of baby alpaca to create the most luxurious and natural socks to touch your feet.</p>
+         <div class="flow-button border-gray continue clickable"><p class="tac nm">View my knit</p></div>
+      </div>
+    </div>
+  <div id="prog" class="flex-container-no jcc fw">
       <div class="progress-circle filled"></div>
       <div class="progress-circle filled"></div>
       <div class="progress-circle"></div>
     </div>
   </section>
-  <section style="display:none;">
+  <section style="display:none;" id="charity-slide">
       <a href="/"><h1 class="close-flow tar text-white">✕</h1></a>
-
-      <div id="prog" class="flex-container-no jcc">
-      <div class="progress-circle filled"></div>
-      <div class="progress-circle filled"></div>
-      <div class="progress-circle filled"></div>
-    </div>
+      <p class="tac large">We feel really lucky to be able to wear this fiber, so a percentage of our profits go to donating alpaca blankets and socks to kids staying at the hospital. We comfort you, you comfort them every step of the way.</p>
+      <div class="flow-button border-gray continue clickable"><p class="tac nm">Awesome, take me to Pacas</p></div>
   </section>
 </div>
 <script>
@@ -142,6 +150,12 @@ edFluffIn3 = function(fluff) {
   }, 800)
 }
 
+$('.color-dye').click(function() {
+  var color = $(this).attr("id")
+  $('#choose').fadeOut(); 
+  $('#dye').fadeIn(); 
+
+})
     // shaveCount += 1 
     // if (shaveCount == 4) {
     //   $('#clothed-paca').attr("src", "{{'naked-paca.png' | asset_url }}"); 
