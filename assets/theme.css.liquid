@@ -78,7 +78,7 @@ img { max-width: 100%; }
     width: 850px;
     margin: 0 auto; 
   }
-  #intro-text {
+  #exit-text ,#intro-text {
     margin-top: 100px;
     margin-left: 400px;
   }
@@ -108,7 +108,7 @@ img { max-width: 100%; }
     background-image: url("{{'dflow-paca.png' | asset_url}}"); 
     background-position: bottom left;
   }
-    #intro-text {
+    #exit-text, #intro-text {
     margin-top: 100px;
     margin-left: 300px;
   }
@@ -119,8 +119,20 @@ img { max-width: 100%; }
   .mo { display: none; }
   .button { width: 200px;}
   footer { padding: 50px; }
-    #shaver { top: 550px; }
-
+  #shaver { top: 480px; }
+  #choose { 
+    display: flex;
+    padding: 0 50px;
+    justify-content: center;
+  }
+  #choose-intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 50px;
+    max-width: 600px;
+  }
 /*  #flow section { height: 65vh; }
 */ 
 }
@@ -135,7 +147,7 @@ img { max-width: 100%; }
     background-image: url("{{'flow-paca.png' | asset_url}}"); 
     background-position: bottom right;
   }
-  #shaver { top: 500px; }
+  #shaver { top: 400px; }
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
   h1 { font-size: 43pt; } 
@@ -152,14 +164,12 @@ img { max-width: 100%; }
 
 }
 @media only screen and (max-width: 588px) {
-  #flow h1 { font-size: 36pt; } 
   h2 { font-size: 16pt; } 
   .flex-container { display: block; }
   .accent-padding { padding: 10px; }
   #atf { height: 90vw; }
   footer section {  margin: 10px;}
-
-
+  #dye { background-position: -45px; }
 }
 @media only screen and (max-width: 588px) and (min-width: 400px) {
     h1 { font-size: 32pt; } 
@@ -167,6 +177,7 @@ img { max-width: 100%; }
 }
 @media only screen and (max-width: 400px) {
   h1 { font-size: 22pt; }
+  #dye p.large { font-size: 12pt; }
 
 }
 .accent { font-family: 'Handsdown', sans-serif; font-weight: 300;}
@@ -351,15 +362,17 @@ footer form {
   background-color: #ffebda; 
     background-size: contain;
     background-repeat: no-repeat;
+    min-height: 700px !important;
 }
 #flow p { max-width: 550px; margin: 10px auto;}
 .flow-button {
-    margin: 30px auto;
+    margin: 25px auto;
     width: 70%;
     border-radius: 30px;
-    padding: 15px;
-    max-width: 280px;
+    padding: 10px;
+    max-width: 250px;
 }
+.flow-button p { font-size: 10pt; }
 .flow-button.slide2 { margin-top: 220px; }
 p.large { font-size: 16pt; margin: 0 auto; }
 .icon { max-width: 50px; }
@@ -440,11 +453,10 @@ a {text-decoration: none;}
 .color-dye { width: 150px; margin: 20px 10px; }
 #dye { min-height: 600px; background-repeat: no-repeat; }
 #color-fluff { width: 200px; display: block; margin: 0 auto; }
-
-
-
-
-
+#flow h1 { font-size: 30pt; } 
+#shave-text { margin-top: 175px !important; }
+#charity-slide p { padding: 0 50px; }
+body section #shaver.rotate { transform: rotate(-10deg); } 
 
 
 
