@@ -1,17 +1,22 @@
 <style>
+@media only screen and (max-width: 799px) {
   #shopify-section-header { display: none !important;}
   footer { display: none !important;}
   main { padding-top: 0 !important; }
+}
 </style>
+<main>
 <div id="flow">
   <section id="paca-intro">
-    <h1 class="close-flow tar"><a href="/">✕</a></h1>
-    <h1 class="accent nm tac">Hi, I'm Paca!</h1>
-    <p class="nmt tac nmt large">Did you know my fleece <br>is so soft the Incas<br> valued it more than gold?</p>
-    <div class="flow-button border-gray continue clickable"><p class="tac nm">Cool, let's get started</p></div>
+    <h1 class="close-flow tar mo"><a href="/">✕</a></h1>
+    <div id="intro-text">
+      <h1 class="accent nm tac">Hi, I'm Paca!</h1>
+      <p class="nmt tac nmt large">Did you know my fleece <br class="mo">is so soft and <br class="do"> rare the Incas<br class="mo"> valued it more than gold?</p>
+      <div class="flow-button border-gray continue clickable"><p class="tac nm">Cool, let's get started!</p></div>
+    </div>
   </section>
   <section style="display:none;" id="shave-me">
-   <h1 class="close-flow tar"><a href="/">✕</a></h1>
+   <h1 class="close-flow tar mo"><a href="/">✕</a></h1>
     <div class="flex-container-no dc">
     <p class="slide2 accent large" style="display: none; position: absolute;margin-left:-70px;">Unlike merino<br>wool and cotton...</p>
       <img src="{{'clothed-paca.png' | asset_url}}" id="clothed-paca" class="paca-bod" />
@@ -27,13 +32,13 @@
       </div>
       <img src="{{'fluff.png' | asset_url}}" class="non-ed" id="fluff2" style="display:none"/>
 
-      <div class="flow-button border-gray continue clickable slide2" style="display: none;"><p class="tac nm">Tap to add color</p></div>
-      <p class="slide1 accent large">Tap to shave me.</p>
+      <p class="slide1 accent large" id="shave-text">Tap to shave me.</p>
+      <div class="flow-button border-gray continue clickable slide2 vis-hid"><p class="tac nm">Tap to add color</p></div>
         <img src="{{'shaver.png' | asset_url}}" id="shaver" class="clickable" />
     </div>
   </section>
   <section style="display:none;" id="color-style">
-    <h1 class="close-flow tar text-white"><a href="/">✕</a></h1>
+    <h1 class="close-flow tar text-white mo"><a href="/">✕</a></h1>
     <div id="choose">
       <img src="{{'fluff.png' | asset_url}}" id="color-fluff" />
       <p class="accent large tac">Pick a color to dye your fleece.</p>
@@ -66,11 +71,12 @@
     </div>
   </section>
   <section style="display:none;" id="charity-slide">
-      <a href="/"><h1 class="close-flow tar text-white">✕</h1></a>
+      <a href="/"><h1 class="close-flow tar text-white mo">✕</h1></a>
       <p class="tac large">We feel really lucky to be able to wear this fiber, so a percentage of our profits go to donating alpaca blankets and socks to kids staying at the hospital. We comfort you, you comfort them every step of the way.</p>
       <a href="/"><div class="flow-button border-gray clickable"><p class="tac nm">Awesome, take me to Pacas</p></div></a>
   </section>
 </div>
+</main>
 <script>
   $('.continue').click(function() {
     $(this).closest('section').hide().next('section').fadeIn();
@@ -78,7 +84,7 @@
 </script>
 <script>
 
-$( "#shaver" ).click(function() {
+$( "#shaver, #shave-text" ).click(function() {
   $('#shave-me').addClass('slide2')
   $('.slide1').fadeOut();
   $('.slide2.large').fadeIn();
@@ -114,7 +120,7 @@ $( "#shaver" ).click(function() {
                   edFluffIn3('#ed-fluff3')
                   fluffIn('#fluff2')
                   $('#shaver').hide();
-                  $('.flow-button.slide2').fadeIn()
+                  $('.flow-button.slide2').removeClass('vis-hid').hide().fadeIn();
                 })
               })
             });

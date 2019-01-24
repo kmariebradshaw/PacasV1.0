@@ -33,7 +33,7 @@
 .text-white { color: #fff; }
 .ttu { text-transform: uppercase; }
 .ib { display: inline-block; }
-.nm { margin: 0; }
+.nm { margin: 0 !important; }
 .nmt { margin-top: 0; }
 .nmb { margin-bottom: 0; }
 body { 
@@ -42,8 +42,9 @@ body {
 }
 a { color: #7b8284; }
 .upper-pad {
-  padding-top: 42.53px;
+  padding-top: 94.55px;
 }
+.vis-hid { visibility: hidden; }
 html { padding-bottom: 0 !important; }
 .background-gray { background-color: #7b8284; }
 .background-purple { background-color: #dacbd8; }
@@ -77,34 +78,64 @@ img { max-width: 100%; }
     width: 850px;
     margin: 0 auto; 
   }
-        #atf  { height: 50vw; }
+  #intro-text {
+    margin-top: 100px;
+    margin-left: 400px;
+  }
+  #atf  { height: 50vw; }
 
 } 
+@media only screen and (min-width: 1401px){
+  #paca-intro, #charity-slide { 
+    background-image: url("{{'dflow-paca.png' | asset_url}}"); 
+    background-position: bottom center;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1400px) {
+   #paca-intro, #charity-slide { 
+    background-image: url("{{'dflow-paca.png' | asset_url}}"); 
+    background-position: bottom left;
+  }
+}
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
   h1 { font-size: 57pt; } 
   h2 { font-size: 32pt; } 
   h3{ font-size: 20pt; } 
   p, table { font-size: 12pt; } 
   footer { padding: 50px; }
-        #atf  { height: 75vw; max-height: 600px; }
+  #atf  { height: 75vw; max-height: 600px; }
+  #paca-intro, #charity-slide { 
+    background-image: url("{{'dflow-paca.png' | asset_url}}"); 
+    background-position: bottom left;
+  }
+    #intro-text {
+    margin-top: 100px;
+    margin-left: 300px;
+  }
 
 }
 @media only screen and (min-width: 800px) {
   .page-header { padding: 50px; }
   .mo { display: none; }
-
   .button { width: 200px;}
-    footer { padding: 50px; }
+  footer { padding: 50px; }
+    #shaver { top: 550px; }
 
-
+/*  #flow section { height: 65vh; }
+*/ 
 }
 @media only screen and (max-width: 799px) {
-    .page-header { padding: 50px 20px; }
-    body #fresh h2 { font-size: 26pt; }
-    .do { display: none !important; }
+  .page-header { padding: 50px 20px; }
+  body #fresh h2 { font-size: 26pt; }
+  .do { display: none !important; }
   .button { width: 120px;}
   footer { padding: 20px; }
-
+  #flow section { height: 100vh; }
+  #paca-intro, #charity-slide { 
+    background-image: url("{{'flow-paca.png' | asset_url}}"); 
+    background-position: bottom right;
+  }
+  #shaver { top: 500px; }
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
   h1 { font-size: 43pt; } 
@@ -138,7 +169,7 @@ img { max-width: 100%; }
   h1 { font-size: 22pt; }
 
 }
-.accent { font-family: 'Handsdown', sans-serif; }
+.accent { font-family: 'Handsdown', sans-serif; font-weight: 300;}
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicksand', sans-serif; } 
 /*header*/
@@ -151,6 +182,8 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Quicks
     margin-top: -1px;
  box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
 }
+  #dnav { background: white; }
+
 #hamburger {
   display: inline-block !important; 
   width: 40px;
@@ -312,14 +345,12 @@ footer form {
 }
 #header-spreader { max-width: 1250px; margin: 0 auto; }
 /* flow */
-#flow section { height: 100vh; padding: 50px 10px; box-sizing: border-box; min-height: fit-content; }
+#flow section { padding: 50px 10px; box-sizing: border-box; min-height: fit-content; }
 .dc { flex-direction: column; } 
 #paca-intro, #charity-slide { 
   background-color: #ffebda; 
-  background-image: url("{{'flow-paca.png' | asset_url}}"); 
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom right;
 }
 #flow p { max-width: 550px; margin: 10px auto;}
 .flow-button {
@@ -332,9 +363,13 @@ footer form {
 .flow-button.slide2 { margin-top: 220px; }
 p.large { font-size: 16pt; margin: 0 auto; }
 .icon { max-width: 50px; }
-.paca-bod {width: 300px;}
-#shaver { width: 150px; transition: transform 0.5s;
-    transform: rotate(-18deg); position: absolute; top: 500px;
+.paca-bod {width: 300px; z-index: 2;}
+#shaver { 
+  width: 150px; 
+  transition: transform 0.5s;
+  transform: rotate(-18deg); 
+  position: absolute; 
+  z-index: 999;
 }
 #shave-me  { background-color: #fdf3ed;}
 #shave-me.slide2 { background-color: #f5fcfc; }
@@ -349,8 +384,8 @@ p.large { font-size: 16pt; margin: 0 auto; }
 #fluff2 { 
   width: 90px; 
     position: absolute;
-    margin-top: 120px;
-    margin-left: 120px;
+    margin-top: 140px;
+    margin-left: 90px;
     z-index: 1;
 }
 
@@ -368,6 +403,7 @@ body .center {
     width: 150px;
     height: 130px;
     position: absolute;
+    z-index: 3;
 }
 .ed-fluff p { margin-left: -3px; }
 #ed-fluff1 {
@@ -392,13 +428,13 @@ body .center {
 #prog { position: absolute; bottom: 20px; }
 #flow .close-flow {
     margin-top: -40px;
-    margin-right: 1s0px;
+    margin-right: 10px;
     opacity: 0.2;
     font-size: 24pt;
     color: brown;
 }
 
-.paca-bod { width: 250px; margin: 0 auto; transition: src 2s;}
+.paca-bod { width: 250px; margin: 0 auto;}
 a {text-decoration: none;}
 
 .color-dye { width: 150px; margin: 20px 10px; }
