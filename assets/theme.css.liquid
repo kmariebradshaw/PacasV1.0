@@ -40,6 +40,7 @@ body {
   margin: 0;
   color:  #7b8284;
 }
+a { color: #7b8284; }
 .upper-pad {
   padding-top: 42.53px;
 }
@@ -311,8 +312,8 @@ footer form {
 }
 #header-spreader { max-width: 1250px; margin: 0 auto; }
 /* flow */
-#flow section { min-height: 100vh; padding: 50px 10px; box-sizing: border-box; }
-.dc { flex-direction: column; }
+#flow section { height: 100vh; padding: 50px 10px; box-sizing: border-box; min-height: fit-content; }
+.dc { flex-direction: column; } 
 #paca-intro, #charity-slide { 
   background-color: #ffebda; 
   background-image: url("{{'flow-paca.png' | asset_url}}"); 
@@ -320,15 +321,16 @@ footer form {
     background-repeat: no-repeat;
     background-position: bottom right;
 }
+#flow p { max-width: 550px; margin: 10px auto;}
 .flow-button {
-    margin: 40px auto;
+    margin: 30px auto;
     width: 70%;
     border-radius: 30px;
     padding: 15px;
     max-width: 280px;
 }
-.flow-button.slide2 { position: absolute; bottom: 50px; }
-p.large { font-size: 16pt; }
+.flow-button.slide2 { margin-top: 220px; }
+p.large { font-size: 16pt; margin: 0 auto; }
 .icon { max-width: 50px; }
 .paca-bod {width: 300px;}
 #shaver { width: 150px; transition: transform 0.5s;
@@ -337,6 +339,7 @@ p.large { font-size: 16pt; }
 #shave-me  { background-color: #fdf3ed;}
 #shave-me.slide2 { background-color: #f5fcfc; }
 #color-style { background: #fffffa;}
+#color-style.secondary-background { background: #fcf9fd; }
 #fluff1 {
     position: absolute;
     width: 90px;
@@ -344,7 +347,7 @@ p.large { font-size: 16pt; }
     margin-top: 150px;
 }
 #fluff2 { 
-  width: 120px; 
+  width: 90px; 
     position: absolute;
     margin-top: 120px;
     margin-left: 120px;
@@ -389,7 +392,7 @@ body .center {
 #prog { position: absolute; bottom: 20px; }
 #flow .close-flow {
     margin-top: -40px;
-    margin-right: 20px;
+    margin-right: 1s0px;
     opacity: 0.2;
     font-size: 24pt;
     color: brown;
@@ -398,8 +401,8 @@ body .center {
 .paca-bod { width: 250px; margin: 0 auto; transition: src 2s;}
 a {text-decoration: none;}
 
-.color-dye { width: 150px; margin: 10px; }
-#dye { min-height: 600px; }
+.color-dye { width: 150px; margin: 20px 10px; }
+#dye { min-height: 600px; background-repeat: no-repeat; }
 #color-fluff { width: 200px; display: block; margin: 0 auto; }
 
 

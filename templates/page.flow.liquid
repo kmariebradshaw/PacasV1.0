@@ -17,7 +17,7 @@
       <img src="{{'clothed-paca.png' | asset_url}}" id="clothed-paca" class="paca-bod" />
       <img src="{{'fluff.png' | asset_url}}" class="non-ed" id="fluff1" style="display: none;"/>
       <div class="ed-fluff flex-container-no jcc" id="ed-fluff1" style="display: none;">
-        <p class="tac text-white subscript">...I'm soft as<br>cashmere and<br>warmer than wool.</p>
+        <p class="tac text-white subscript">...I'm soft as<br>cashmere <br>warmer than wool <br> and rarer than both.</p>
       </div>
       <div class="ed-fluff flex-container-no jcc" id="ed-fluff2" style="display: none;">
         <p class="tac text-white subscript">...I'm itch free<br>and hypoallergenic.</p>
@@ -30,11 +30,6 @@
       <div class="flow-button border-gray continue clickable slide2" style="display: none;"><p class="tac nm">Tap to add color</p></div>
       <p class="slide1 accent large">Tap to shave me.</p>
         <img src="{{'shaver.png' | asset_url}}" id="shaver" class="clickable" />
-      <div id="prog" class="flex-container-no jcc" >
-        <div class="progress-circle filled"></div>
-        <div class="progress-circle"></div>
-        <div class="progress-circle"></div>
-      </div>
     </div>
   </section>
   <section style="display:none;" id="color-style">
@@ -43,46 +38,45 @@
       <img src="{{'fluff.png' | asset_url}}" id="color-fluff" />
       <p class="accent large tac">Pick a color to dye your fleece.</p>
       <p class="tac">Alpaca fibers have no natural grease and are known as the world's most sustainable fibers.</p>
-      <div class="flex-container-no jes">
+      <div class="flex-container-no jcc">
         <img src="{{'purple.png' | asset_url}}" class="color-dye clickable" id="purple"/>
         <img src="{{'navy.png' | asset_url}}" class="color-dye clickable" id="navy"/>
       </div>
-       <div class="flex-container-no jes">
+       <div class="flex-container-no jcc">
         <img src="{{'aqua.png' | asset_url}}" class="color-dye clickable" id="aqua"/>
         <img src="{{'coral.png' | asset_url}}"  class="color-dye clickable" id="coral"/>
       </div>
-       <div class="flex-container-no jes">
+       <div class="flex-container-no jcc">
         <img src="{{'gray.png' | asset_url}}"  class="color-dye clickable" id="gray"/>
         <img src="{{'brown.png' | asset_url}}" class="color-dye clickable" id="condensed-milk"/>
       </div>
-       <div class="flex-container-no jes">
+       <div class="flex-container-no jcc">
         <img src="{{'white.png' | asset_url}}"  class="color-dye clickable" id="white"/>
         <img src="{{'black.png' | asset_url}}" class="color-dye clickable" id="my-soul"/>
       </div>
     </div>
-    <div id="dye" class="flex-container-no jcc" style="display: none">
-      <div class="third"></div>
-      <div class="two-thirds">
-        <p class="tac large">We've perfected the best combination of baby alpaca to create the most luxurious and natural socks to touch your feet.</p>
-         <div class="flow-button border-gray continue clickable"><p class="tac nm">View my knit</p></div>
+    <div id="dye" style="display: none">
+       <div class="flex-container-no jcc" style="min-height: 650px">
+        <div class="third"></div>
+        <div class="two-thirds">
+          <p class="tac large">We’ve tested hundreds of Alpaca blends to curate the most luxurious and natural socks to touch your feet.</p>
+          <div class="flow-button border-gray continue clickable"><p class="tac nm">View my knit</p></div>
+        </div>
       </div>
-    </div>
-  <div id="prog" class="flex-container-no jcc fw">
-      <div class="progress-circle filled"></div>
-      <div class="progress-circle filled"></div>
-      <div class="progress-circle"></div>
     </div>
   </section>
   <section style="display:none;" id="charity-slide">
       <a href="/"><h1 class="close-flow tar text-white">✕</h1></a>
       <p class="tac large">We feel really lucky to be able to wear this fiber, so a percentage of our profits go to donating alpaca blankets and socks to kids staying at the hospital. We comfort you, you comfort them every step of the way.</p>
-      <div class="flow-button border-gray continue clickable"><p class="tac nm">Awesome, take me to Pacas</p></div>
+      <a href="/"><div class="flow-button border-gray clickable"><p class="tac nm">Awesome, take me to Pacas</p></div></a>
   </section>
 </div>
 <script>
   $('.continue').click(function() {
     $(this).closest('section').hide().next('section').fadeIn();
   })
+</script>
+<script>
 
 $( "#shaver" ).click(function() {
   $('#shave-me').addClass('slide2')
@@ -147,21 +141,15 @@ edFluffIn2 = function(fluff) {
 edFluffIn3 = function(fluff) {
   $(fluff).show().animate({
     top: "+=170",
-  }, 800)
+  }, 800) 
 }
 
 $('.color-dye').click(function() {
+  $('#color-style').addClass('secondary-background')
   var color = $(this).attr("id")
+  var url = "url('//cdn.shopify.com/s/files/1/0117/0597/4884/t/2/assets/" + color + ".gif?13305863534868877902'"
   $('#choose').fadeOut(); 
-  $('#dye').fadeIn(); 
-
+  $('#dye').fadeIn().css("background-image", url)
 })
-    // shaveCount += 1 
-    // if (shaveCount == 4) {
-    //   $('#clothed-paca').attr("src", "{{'naked-paca.png' | asset_url }}"); 
-    // $('.slide1').hide()
-    // $('#shave-me').addClass('slide2'); 
-    // $('.slide2').fadeIn();
-    // }
-    // $('#fluff' + shaveCount).removeClass('vis-hid'); 
+
 </script>
