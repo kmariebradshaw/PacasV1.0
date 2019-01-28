@@ -112,7 +112,8 @@ $(document).ready(function() {
 $( "#shaver, #shave-text" ).click(function() {
   $("#shaver").removeClass('jiggle')
   $('#shave-me').addClass('slide2')
-  $('.slide1').fadeOut();
+  $('.flow-button.slide2').addClass('post-shave')
+  $('.slide1').hide();
   $('.slide2.large').fadeIn();
   $( "#shaver" ).animate({
     top: "-=200",
