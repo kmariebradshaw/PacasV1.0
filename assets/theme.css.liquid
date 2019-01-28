@@ -48,6 +48,7 @@ a { color: #7b8284; }
 html { padding-bottom: 0 !important; }
 .background-gray { background-color: #7b8284; }
 .background-purple { background-color: #dacbd8; }
+.background-blue {background-color: #f5fcfc;}
 .tar { text-align: right; }
 .fw { width: 100%; }
 .flex-container-no, .flex-container{
@@ -90,17 +91,21 @@ img { max-width: 100%; }
     background-image: url("{{'dflow-paca.png' | asset_url}}"); 
     background-position: bottom center;
   }
+    #our-story .page-header { height: 500px;}
+
 }
 @media only screen and (min-width: 1100px) and (max-width: 1400px) {
    #paca-intro, #charity-slide { 
     background-image: url("{{'dflow-paca.png' | asset_url}}"); 
     background-position: bottom left;
   }
+    #our-story .page-header { height: 400px;}
+
 }
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
   h1 { font-size: 57pt; } 
   h2 { font-size: 32pt; } 
-  h3{ font-size: 20pt; } 
+  h3{ font-size: 16pt; } 
   p, table { font-size: 12pt; } 
   footer { padding: 50px; }
   #atf  { height: 75vw; max-height: 600px; }
@@ -112,7 +117,7 @@ img { max-width: 100%; }
     margin-top: 100px;
     margin-left: 300px;
   }
-
+  #our-story .page-header { height: 300px;}
 }
 @media only screen and (min-width: 800px) {
   .page-header { padding: 50px; }
@@ -456,7 +461,13 @@ a {text-decoration: none;}
 #shave-text { margin-top: 175px !important; }
 #charity-slide p { padding: 0 50px; }
 body section #shaver.rotate { transform: rotate(-10deg); } 
-
-
+/* our story*/
+#our-story .page-header { 
+  background-image: url("{{'girl-with-paca.png' | asset_url}}"); 
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+.double-padding { padding: 50px; }
 
 
