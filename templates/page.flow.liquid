@@ -33,10 +33,10 @@
         <p class="tac text-white subscript">I'll keep you<br>warm in the<br>winter & cool<br>in the summer</p>
       </div>
       <img src="{{'fluff.png' | asset_url}}" class="non-ed" id="fluff2" style="display:none"/>
-
         <img src="{{'shaver.png' | asset_url}}" id="shaver" class="clickable jiggle" />
       <p class="slide1 large" id="shave-text">Tap to shave me.</p>
       <div class="flow-button border-gray continue clickable slide2 vis-hid"><p class="tac nm">Tap to add color</p></div>
+      <p class="slide2 tac back clickable">← Back</ps>
     </div>
   </section>
   <section style="display:none;" id="color-style">
@@ -75,12 +75,15 @@
         </div>
       </div>
     </div>
+        <p class="tac back clickable">← Back</ps>
   </section>
   <section style="display:none;" id="charity-slide">
       <a href="/"><h1 class="close-flow tar text-white mo">✕</h1></a>
       <div id="exit-text">
         <p class="tac large">We feel really lucky to be able to wear this fiber, so a percentage of our profits go to donating alpaca blankets and socks to kids staying at the hospital. We comfort you, you comfort them every step of the way.</p>
         <a href="/"><div class="flow-button border-gray clickable"><p class="tac nm">Cool, take me to Pacas</p></div></a>
+        <p class="slide2 tac back clickable">← Back</ps>
+
       </div>
   </section>
 </div>
@@ -88,6 +91,16 @@
 <script>
   $('.continue').click(function() {
     $(this).closest('section').hide().next('section').fadeIn();
+  })
+  $('.back').click(function() {
+    if ($('#dye').is(":visible")) {
+      $('#dye').hide(); 
+      $('#color-style').removeClass('secondary-background')
+      $('#choose').fadeIn()
+    }
+    else { 
+    $(this).closest('section').hide().prev('section').fadeIn(); 
+  }
   })
 </script>
 <script>
@@ -167,7 +180,7 @@ $('.color-dye').click(function() {
   $('#color-style').addClass('secondary-background')
   var color = $(this).attr("id")
   var url = "url('//cdn.shopify.com/s/files/1/0117/0597/4884/t/2/assets/" + color + ".gif?13305863534868877902'"
-  $('#choose').fadeOut(); 
+  $('#choose').hide(); 
   $('#dye').fadeIn().css("background-image", url)
 })
 
