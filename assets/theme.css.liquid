@@ -92,6 +92,7 @@ img { max-width: 100%; }
     background-position: bottom center;
   }
     #our-story .page-header { height: 500px;}
+#dye { background-position: 350px; }
 
 }
 @media only screen and (min-width: 1100px) and (max-width: 1400px) {
@@ -100,7 +101,7 @@ img { max-width: 100%; }
     background-position: bottom left;
   }
     #our-story .page-header { height: 400px;}
-
+#dye { background-position: 250px; }
 }
 @media only screen and (min-width: 800px) and (max-width: 1099px) {
   h1 { font-size: 57pt; } 
@@ -124,12 +125,14 @@ img { max-width: 100%; }
   .mo { display: none; }
   .button { width: 200px;}
   footer { padding: 50px; }
-  #shaver { top: 480px; }
+  #shaver { top: 555px; }
   #choose { 
     display: flex;
     padding: 0 50px;
     justify-content: center;
   }
+  .prog-bar { margin-bottom: 50px; }
+
   .double-padding { padding: 50px; }
 
   #choose-intro {
@@ -154,8 +157,9 @@ img { max-width: 100%; }
     background-image: url("{{'flow-paca.png' | asset_url}}"); 
     background-position: bottom right;
   }
-  #shaver { top: 400px; }
+  #shaver { top: 450px; }
   .double-padding { padding: 20px; }
+.prog-bar { margin-top: -25px; }
 
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
@@ -386,8 +390,11 @@ footer form {
     padding: 10px;
     max-width: 250px;
 }
+#flow .back { font-size: 10pt; }
+#flow .subscript { font-size: 11pt; }
 .flow-button p { font-size: 10pt; }
-.flow-button.slide2 { margin-top: 220px; }
+.flow-button.slide2 { margin-top: 84px; }
+.flow-button.slide2.post-shave { margin-top: 250px; }
 p.large { font-size: 16pt; margin: 0 auto; }
 .icon { max-width: 50px; }
 .paca-bod {width: 300px; z-index: 2;}
@@ -415,10 +422,16 @@ p.large { font-size: 16pt; margin: 0 auto; }
     margin-left: 90px;
     z-index: 1;
 }
-
-
+.prog {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #7b8284;
+    margin: 5px;
+    border-radius: 100%;
+    display: inline-block;
+}
+.prog.filled { background:#7b8284; }
 body .center {
-    width: 130px;
     height: 130px;
     margin-left: -65px;
     margin-top: -65px;
@@ -427,11 +440,12 @@ body .center {
   background-image: url("{{'dfluff.png' | asset_url}}");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 130px;
+    width: 170px;
+    height: 145px;
     position: absolute;
     z-index: 3;
 }
+.prog-bar { opacity: .2; }
 .ed-fluff p { margin-left: -3px; }
 #ed-fluff1 {
   margin-top: 120px;
@@ -447,18 +461,14 @@ body .center {
     margin-top: 100px;
     z-index: 2;
 }
-
 #leaf { margin: 0 auto; display: block; }
-
-.progress-circle { width: 15px; height: 15px; border: 1px solid  #7b8284; border-radius: 50%; margin: 5px;}
-.progress-circle.filled { background:  #7b8284; }
-#prog { position: absolute; bottom: 20px; }
 #flow .close-flow {
     margin-top: -40px;
     margin-right: 10px;
     opacity: 0.2;
     font-size: 24pt;
     color: brown;
+    margin-bottom: 50px;
 }
 
 .paca-bod { width: 250px; margin: 0 auto;}
@@ -469,7 +479,7 @@ a {text-decoration: none;}
 #color-fluff { width: 200px; display: block; margin: 0 auto; }
 #flow h1 { font-size: 30pt; } 
 #shave-text { margin-top: 175px !important; }
-#charity-slide p { padding: 0 50px; }
+#charity-slide p { padding: 0 20px; }
 body section #shaver.rotate { transform: rotate(-10deg); } 
 /* our story*/
 #our-story .page-header { 
