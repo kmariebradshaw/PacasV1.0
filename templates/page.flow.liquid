@@ -10,6 +10,13 @@
 <main>
 <div id="flow">
   <section id="paca-intro">
+    <div class="tac prog-bar">
+      <div class="prog filled"></div>
+      <div class="prog"></div>
+      <div class="prog"></div>
+      <div class="prog"></div>
+      <div class="prog"></div>
+    </div>
     <h1 class="close-flow tar mo"><a href="/">✕</a></h1>
     <div id="intro-text">
       <h1 class="accent nm tac">Hi, I'm Paca!</h1>
@@ -18,6 +25,13 @@
     </div>
   </section>
   <section style="display:none;" id="shave-me">
+    <div class="tac prog-bar">
+      <div class="prog filled"></div>
+      <div class="prog filled"></div>
+      <div class="prog"></div>
+      <div class="prog"></div>
+      <div class="prog"></div>
+    </div>
    <h1 class="close-flow tar mo"><a href="/">✕</a></h1>
     <div class="flex-container-no dc">
     <p class="slide2 accent large" style="display: none; position: absolute;margin-left:-70px;">Unlike merino<br>wool and cotton...</p>
@@ -40,6 +54,13 @@
     </div>
   </section>
   <section style="display:none;" id="color-style">
+    <div class="tac prog-bar">
+      <div class="prog filled"></div>
+      <div class="prog filled"></div>
+      <div class="prog filled"></div>
+      <div class="prog" id="slide-prog"></div>
+      <div class="prog"></div>
+    </div>
     <h1 class="close-flow tar text-white mo"><a href="/">✕</a></h1>
     <div id="choose">
       <div id="choose-intro">
@@ -78,6 +99,7 @@
         <p class="tac back clickable">← Back</ps>
   </section>
   <section style="display:none;" id="charity-slide">
+
       <a href="/"><h1 class="close-flow tar text-white mo">✕</h1></a>
       <div id="exit-text">
         <p class="tac large">We feel really lucky to be able to wear this fiber, so a percentage of our profits go to donating alpaca blankets and socks to kids staying at the hospital. We comfort you, you comfort them every step of the way.</p>
@@ -179,6 +201,7 @@ edFluffIn3 = function(fluff) {
 
 $('.color-dye').click(function() {
   $('#color-style').addClass('secondary-background')
+  $('#slide-prog').addClass('filled')
   var color = $(this).attr("id")
   var url = "url('//cdn.shopify.com/s/files/1/0117/0597/4884/t/2/assets/" + color + ".gif?13305863534868877902'"
   $('#choose').hide(); 

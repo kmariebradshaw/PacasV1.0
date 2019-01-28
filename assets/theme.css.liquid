@@ -125,12 +125,14 @@ img { max-width: 100%; }
   .mo { display: none; }
   .button { width: 200px;}
   footer { padding: 50px; }
-  #shaver { top: 480px; }
+  #shaver { top: 555px; }
   #choose { 
     display: flex;
     padding: 0 50px;
     justify-content: center;
   }
+  .prog-bar { margin-bottom: 50px; }
+
   .double-padding { padding: 50px; }
 
   #choose-intro {
@@ -155,8 +157,9 @@ img { max-width: 100%; }
     background-image: url("{{'flow-paca.png' | asset_url}}"); 
     background-position: bottom right;
   }
-  #shaver { top: 400px; }
+  #shaver { top: 450px; }
   .double-padding { padding: 20px; }
+.prog-bar { margin-top: -25px; }
 
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
@@ -419,8 +422,15 @@ p.large { font-size: 16pt; margin: 0 auto; }
     margin-left: 90px;
     z-index: 1;
 }
-
-
+.prog {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #7b8284;
+    margin: 5px;
+    border-radius: 100%;
+    display: inline-block;
+}
+.prog.filled { background:#7b8284; }
 body .center {
     height: 130px;
     margin-left: -65px;
@@ -435,6 +445,7 @@ body .center {
     position: absolute;
     z-index: 3;
 }
+.prog-bar { opacity: .2; }
 .ed-fluff p { margin-left: -3px; }
 #ed-fluff1 {
   margin-top: 120px;
@@ -450,18 +461,14 @@ body .center {
     margin-top: 100px;
     z-index: 2;
 }
-
 #leaf { margin: 0 auto; display: block; }
-
-.progress-circle { width: 15px; height: 15px; border: 1px solid  #7b8284; border-radius: 50%; margin: 5px;}
-.progress-circle.filled { background:  #7b8284; }
-#prog { position: absolute; bottom: 20px; }
 #flow .close-flow {
     margin-top: -40px;
     margin-right: 10px;
     opacity: 0.2;
     font-size: 24pt;
     color: brown;
+    margin-bottom: 50px;
 }
 
 .paca-bod { width: 250px; margin: 0 auto;}
@@ -472,7 +479,7 @@ a {text-decoration: none;}
 #color-fluff { width: 200px; display: block; margin: 0 auto; }
 #flow h1 { font-size: 30pt; } 
 #shave-text { margin-top: 175px !important; }
-#charity-slide p { padding: 0 50px; }
+#charity-slide p { padding: 0 20px; }
 body section #shaver.rotate { transform: rotate(-10deg); } 
 /* our story*/
 #our-story .page-header { 
