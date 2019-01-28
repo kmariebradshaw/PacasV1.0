@@ -130,6 +130,8 @@ img { max-width: 100%; }
     padding: 0 50px;
     justify-content: center;
   }
+  .double-padding { padding: 50px; }
+
   #choose-intro {
     justify-content: center;
     display: flex;
@@ -153,6 +155,8 @@ img { max-width: 100%; }
     background-position: bottom right;
   }
   #shaver { top: 400px; }
+  .double-padding { padding: 20px; }
+
 }
 @media only screen and (min-width: 589px) and (max-width: 799px) {
   h1 { font-size: 43pt; } 
@@ -184,6 +188,12 @@ img { max-width: 100%; }
   h1 { font-size: 22pt; }
   #dye p.large { font-size: 12pt; }
 
+}
+@media only screen and (max-width: 450px) {
+  #our-story .page-header { background-position: -60px;}
+}
+@media only screen and (min-width: 451px) {
+  #our-story .page-header { background-position: bottom left;}
 }
 .accent { font-family: 'Handsdown', sans-serif; font-weight: 300;}
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Quicksand', sans-serif; }
@@ -465,9 +475,7 @@ body section #shaver.rotate { transform: rotate(-10deg); }
 #our-story .page-header { 
   background-image: url("{{'girl-with-paca.png' | asset_url}}"); 
   background-repeat: no-repeat;
-  background-position: bottom left;
   background-size: cover;
 }
-.double-padding { padding: 50px; }
 
 
